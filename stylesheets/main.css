@@ -14,7 +14,6 @@
   margin: 0 auto;
 }
 
-/* Style the header */
 header {
   background-color: #BE1E1E;
   padding: 15px;
@@ -49,26 +48,39 @@ header {
   text-align: right;
 }
 
-section {
-  display: -webkit-flex;
+.container {
   display: flex;
+  justify-content: space-evenly;
 }
 
-article {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  padding: 10px;
-  width: 65%;
+.about-place {
+  order: 1;
+  flex: 65%;
   padding: 30px;
 }
 
-aside {
-  -webkit-flex: 2;
-  -ms-flex: 2;
-  flex: 2;
+.about-place img {
+  width:1000px;
+  height:600;
+}
+
+.sidenav {
+  order: 2;
+  flex: 35%;
   padding: 20px;
   align-items: right;
+}
+
+.sidenav img {
+  width:250px;
+  object-fit: cover;
+  padding-bottom: 30px;
+}
+
+@media (max-width: 800px) {
+  .about-place, .sidenav {
+    flex: 100%;
+  }
 }
 
 h3 {
@@ -90,7 +102,7 @@ h4 {
   font-size: 14px;
   font-family: Arial;
   font-weight: bold;
-  padding: 50px 5px 10px 0px;
+  padding: 30px 5px 10px 0px;
 }
 
 footer {
